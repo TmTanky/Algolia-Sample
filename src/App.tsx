@@ -5,6 +5,8 @@ import {
   SearchBox,
   Hits,
   Highlight,
+  Pagination,
+  Configure,
 } from 'react-instantsearch-hooks-web';
 import type { Hit, BaseHit } from 'instantsearch.js';
 
@@ -43,8 +45,10 @@ function Search() {
   return (
     <>
       <h1> Algolia Practice </h1>
+      <Configure hitsPerPage={5} />
       <SearchBox />
       <Hits hitComponent={CustomHit} />
+      <Pagination />
     </>
   );
 }
