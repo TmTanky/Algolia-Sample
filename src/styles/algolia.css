@@ -1,0 +1,31 @@
+.custom-search-box-root {
+  padding: 20px;
+  width: 100%;
+}
+
+.custom-search-box-form {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-search-box-input {
+  width: 100%;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: solid gainsboro 1px;
+}
+
+.custom-search-box-submit,
+.custom-search-box-reset {
+  padding: 0 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) {
+  .custom-search-box-input {
+    width: 70%;
+  }
+}

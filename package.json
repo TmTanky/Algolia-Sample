@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.184",
     "algoliasearch": "^4.14.2",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
     "react-instantsearch-hooks-web": "^6.32.0"
   },
   "devDependencies": {
