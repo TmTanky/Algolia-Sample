@@ -2,13 +2,13 @@ import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
-  SearchBox,
   Hits,
   Highlight,
   Pagination,
   Configure,
 } from 'react-instantsearch-hooks-web';
 import type { Hit, BaseHit } from 'instantsearch.js';
+import CustomSearchBox from './components/Algolia/CustomSearchBox';
 
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
@@ -46,7 +46,7 @@ function Search() {
     <>
       <h1> Algolia Practice </h1>
       <Configure hitsPerPage={5} />
-      <SearchBox />
+      <CustomSearchBox />
       <Hits hitComponent={CustomHit} />
       <Pagination />
     </>
@@ -56,7 +56,10 @@ function Search() {
 function App() {
   return (
     <div className='App'>
-      <InstantSearch searchClient={searchClient} indexName='search-sample'>
+      <InstantSearch
+        searchClient={searchClient}
+        indexName='search-sample'
+      >
         <Search />
       </InstantSearch>
     </div>
