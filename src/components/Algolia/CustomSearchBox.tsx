@@ -6,7 +6,8 @@ import '../../styles/algolia.css';
 
 // TODO: Improve the debounce call
 
-export default function CustomSearchBox() {
+// eslint-disable-next-line import/prefer-default-export
+export function CustomSearchBox() {
   return (
     <SearchBox
       classNames={{
@@ -18,7 +19,9 @@ export default function CustomSearchBox() {
       }}
       placeholder='Search for Phones...'
       autoFocus
+      // eslint-disable-next-line react/no-unstable-nested-components
       submitIconComponent={() => <MdSearch color='black' size={20} />}
+      // eslint-disable-next-line react/no-unstable-nested-components
       resetIconComponent={() => <MdClose color='black' size={20} />}
       queryHook={(query, search) => {
         const pota = debounce(() => search(query), 1000);
